@@ -54,6 +54,7 @@ Choose Arithmetic Operation:
             break;
 
             case 2:
+              while(nav == 1){
               System.out.print("\nYou are doing a subtraction. " + "Enter first number: ");
               num1 = input.nextInt();
               System.out.print("Enter second number: ");
@@ -62,9 +63,16 @@ Choose Arithmetic Operation:
               diff = num1 - num2;
 
               System.out.println("Result: " + diff);
+              System.out.println("Enter 1 to add again or 0 to go back to menu: ");
+              nav = input.nextInt();
+              if(nav == 0){
               break;
+              }
+            }
+            break;
 
             case 3:
+              while(nav == 1){
               System.out.print("\nYou are doing a multiplication " + "Enter first number: ");
               num1 = input.nextInt();
               System.out.print("Enter second number: ");
@@ -73,21 +81,34 @@ Choose Arithmetic Operation:
               diff = num1 - num2;
 
               System.out.println("Result: " + diff);
+              System.out.println("Enter 1 to add again or 0 to go back to menu: ");
+              nav = input.nextInt();
+              if(nav == 0){
+              break;
+              }
+            }
               break;
 
             case 4:
-              System.out.print("\nYou are doing a division " + "Enter first number: ");
-              num1 = input.nextInt();
-              System.out.print("Enter second number: ");
-              num2 = input.nextInt();
+              while(nav == 1){
+                System.out.print("\nYou are doing a division " + "Enter first number: ");
+                num1 = input.nextInt();
+                System.out.print("Enter second number: ");
+                num2 = input.nextInt();
 
-              if(num2 != 0){
-                div = (double) num1 / num2;
-                System.out.printf("Result: %.2f%n", div);
-              }
-              else{
+                if(num2 != 0){
+                  div = (double) num1 / num2;
+                  System.out.printf("Result: %.2f%n", div);
+                  System.out.println("Enter 1 to add again or 0 to go back to menu: ");
+                nav = input.nextInt();
+                  if(nav == 0){
+                  break;
+                  }
+                }
+                else{
                 System.out.println("Number cannot be divided by 0");
                 break;
+                }
               }
               break;
 
